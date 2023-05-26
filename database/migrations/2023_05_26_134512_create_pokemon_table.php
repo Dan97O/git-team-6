@@ -20,8 +20,8 @@ return new class extends Migration
             $table->string('primary_type', 30);
             $table->string('secondary_type', 30)->nullable();
             $table->tinyInteger('order')->unsigned();
-            $table->string('height', 10);
-            $table->string('weight', 10);
+            $table->string('height', 155);
+            $table->string('weight', 155);
             $table->string('species', 50);
             $table->boolean('caught')->default(false);
             $table->string('gender', 2)->nullable();
