@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Guests;
 
 use App\Http\Controllers\Controller;
+use App\Models\Pokemon;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -13,6 +14,7 @@ class PageController extends Controller
     }
     public function pokedex()
     {
-        return view('pokedex');
+        $pokemons = Pokemon::all();
+        return view('pokedex', compact('pokemons'));
     }
 }

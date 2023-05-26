@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Guests\PageController as PokedexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PageController::class, 'index'])->name('home');
-Route::get('/pokedex', [PageController::class, 'pokedex'])->name('pokedex');
-;
+Route::get('/', [PokedexController::class, 'index'])->name('home');
+Route::get('/pokedex', [PokedexController::class, 'pokedex'])->name('pokedex');
