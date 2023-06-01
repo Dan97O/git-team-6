@@ -16,15 +16,17 @@ return new class extends Migration
         Schema::create('pokemon', function (Blueprint $table) {
             $table->id();
             $table->string('name', 100);
-            $table->string('image', 255);
-            $table->string('primary_type', 30);
-            $table->string('secondary_type', 30)->nullable();
-            $table->tinyInteger('order')->unsigned();
-            $table->string('height', 155);
-            $table->string('weight', 155);
-            $table->string('species', 50);
-            $table->boolean('caught')->default(false);
-            $table->string('gender', 2)->nullable();
+            $table->string('type_1', 30);
+            $table->string('type_2', 30)->nullable();
+            $table->integer('total');
+            $table->integer('hp');
+            $table->integer('attack');
+            $table->integer('defense');
+            $table->integer('sp_atk');
+            $table->integer('sp_def');
+            $table->integer('speed');
+            $table->integer('generation');
+            $table->boolean('legendary')->default(false);
             $table->timestamps();
         });
     }
