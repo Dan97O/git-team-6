@@ -5,23 +5,31 @@
         <div class="container">
             <div class="row">
                 @foreach ($pokemons as $pokemon)
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h2>Name: {{ $pokemon->name }}</h2>
+                    <div class="col-12 col-md-6 col-lg-4 my-5">
+                        <div class="card my_card">
+                            <div class="card-img-top">
+                                <img src="{{ $pokemon->gif }}" alt="{{ $pokemon->name }}">
                             </div>
                             <div class="card-body">
-                                <h3>Type 1: {{ $pokemon->type_1 }}</h3>
-                                <h3>Type 2: {{ $pokemon->type_2 }}</h3>
-                                <h3>Total: {{ $pokemon->total }}</h3>
-                                <h3>HP: {{ $pokemon->hp }}</h3>
-                                <h3>Attack: {{ $pokemon->attack }}</h3>
-                                <h3>Defense: {{ $pokemon->defense }}</h3>
-                                <h3>Special Attack: {{ $pokemon->sp_atk }}</h3>
-                                <h3>Special Defense: {{ $pokemon->sp_def }}</h3>
-                                <h3>Speed: {{ $pokemon->speed }}</h3>
-                                <h3>Generation: {{ $pokemon->generation }}</h3>
-                                <h3>Legendary: {{ $pokemon->legendary ? 'Yes' : 'No' }}</h3>
+                                <span class="type-label {{ strtolower($pokemon->type_1) }}">
+                                    {{ $pokemon->type_1 }}
+                                </span>
+                                @if ($pokemon->type_2)
+                                    <span class="type-label {{ strtolower($pokemon->type_2) }}">
+                                        {{ $pokemon->type_2 }}
+                                    </span>
+                                @endif
+                                <div class="card-text mt-3">
+                                    <p>HP: {{ $pokemon->hp }}</p>
+                                    <p>Attack: {{ $pokemon->attack }}</p>
+                                    <p>Defense: {{ $pokemon->defense }}</p>
+                                    <p>Speed: {{ $pokemon->speed }}</p>
+                                    <p>Special: {{ $pokemon->special }}</p>
+                                    <p>Description: {{ $pokemon->description }}</p>
+                                </div>
+                                <div class="card-footer d-flex justify-content-center align-items-center h-100">
+                                    <h1>{{ $pokemon->name }}</h1>
+                                </div>
                             </div>
                         </div>
                     </div>

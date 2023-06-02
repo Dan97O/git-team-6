@@ -1,1 +1,90 @@
 @import '~bootstrap/scss/bootstrap';
+
+.my_card {
+    min-height: 630px;
+
+    .card-img-top {
+        object-fit: contain;
+        background-color: lightgray;
+        height: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            object-fit: contain;
+            height: 150px;
+        }
+    }
+
+    .type-label {
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+    .grass {
+        background-color: rgb(10, 187, 10);
+    }
+
+    .poison {
+        background-color: rgb(165, 8, 165);
+    }
+
+    .fire {
+        background-color: #fd7d24;
+    }
+
+    .flying {
+        background-color: rgb(62, 174, 211);
+    }
+
+    .water {
+        background-color: #4592c4;
+    }
+
+    .bug {
+        background-color: rgb(3, 97, 3);
+    }
+
+    .normal {
+        background-color: rgb(167, 166, 166);
+        color: black;
+    }
+
+    .ground {
+        background-color: rgb(146, 51, 51);
+    }
+
+    .electric {
+        background-color: rgb(255 241 88);
+        color: black;
+    }
+
+    .fighting {
+        background-color: red;
+    }
+
+    .psychic {
+        background-color: rgb(231, 123, 141);
+    }
+
+    .rock {
+        background-color: rgb(131, 131, 131);
+    }
+
+    .ice {
+        background-color: rgba(0, 191, 255, 0.479);
+        color: black;
+    }
+
+    .ghost {
+        background-color: rgb(75, 0, 75);
+    }
+
+    .dragon {
+        background-color: darkblue;
+    }
+}
