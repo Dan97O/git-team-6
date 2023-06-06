@@ -24,67 +24,76 @@
         color: #ffffff;
         font-weight: bold;
     }
+}
 
-    .grass {
-        background-color: rgb(10, 187, 10);
-    }
+.grass {
+    background-color: rgb(10, 187, 10);
+}
 
-    .poison {
-        background-color: rgb(165, 8, 165);
-    }
+.poison {
+    background-color: rgb(165, 8, 165);
+}
 
-    .fire {
-        background-color: #fd7d24;
-    }
+.fire {
+    background-color: #fd7d24;
+}
 
-    .flying {
-        background-color: rgb(62, 174, 211);
-    }
+.flying {
+    background-color: rgb(62, 174, 211);
+}
 
-    .water {
-        background-color: #4592c4;
-    }
+.water {
+    background-color: #4592c4;
+}
 
-    .bug {
-        background-color: rgb(3, 97, 3);
-    }
+.bug {
+    background-color: rgb(3, 97, 3);
+}
 
-    .normal {
-        background-color: rgb(167, 166, 166);
-        color: black;
-    }
+.normal {
+    background-color: rgb(167, 166, 166);
+    color: black;
+}
 
-    .ground {
-        background-color: rgb(146, 51, 51);
-    }
+.ground {
+    background-color: rgb(146, 51, 51);
+}
 
-    .electric {
-        background-color: rgb(255 241 88);
-        color: black;
-    }
+.electric {
+    background-color: rgb(255 241 88);
+    color: black;
+}
 
-    .fighting {
-        background-color: red;
-    }
+.fighting {
+    background-color: red;
+}
 
-    .psychic {
-        background-color: rgb(231, 123, 141);
-    }
+.psychic {
+    background-color: rgb(231, 123, 141);
+}
 
-    .rock {
-        background-color: rgb(131, 131, 131);
-    }
+.rock {
+    background-color: rgb(131, 131, 131);
+}
 
-    .ice {
-        background-color: rgba(0, 191, 255, 0.479);
-        color: black;
-    }
+.ice {
+    background-color: rgba(0, 191, 255, 0.479);
+    color: black;
+}
 
-    .ghost {
-        background-color: rgb(75, 0, 75);
-    }
+.ghost {
+    background-color: rgb(75, 0, 75);
+}
 
-    .dragon {
-        background-color: darkblue;
+.dragon {
+    background-color: darkblue;
+}
+
+.card-body{
+    span{
+        width: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }

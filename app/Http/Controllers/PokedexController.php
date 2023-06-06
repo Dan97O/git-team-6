@@ -28,7 +28,8 @@ class PokedexController extends Controller
      */
     public function create()
     {
-        return view('admin.pokedex.create');
+        $pokemons = Pokedex::all();
+        return view('admin.pokedex.create', compact('pokemons'));
     }
 
     /**
@@ -52,7 +53,8 @@ class PokedexController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Pokedex $pokedex)
-    {
+    {   
+        $pokemons = Pokedex::all();
         return view('admin.pokedex.show', compact('pokedex'));
     }
 
@@ -63,7 +65,8 @@ class PokedexController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Pokedex $pokedex)
-    {
+    {   
+        $pokemons = Pokedex::all();
         return view('admin.pokedex.edit', compact('pokedex'));
     }
 
