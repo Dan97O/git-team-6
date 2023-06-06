@@ -28,6 +28,7 @@
                             <td scope="row"> {{ $pokemon->type_1 }} </td>
                             <td scope="row"> {{ $pokemon->type_2 }} </td>
                             <td scope="row">
+                            <a role="button" class="btn btn-primary" href="{{route('admin.pokedex.edit', $pokemon->id)}}"></a>  
                                 view/edit/delete
                             </td>
                         </tr>
