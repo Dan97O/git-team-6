@@ -16,7 +16,7 @@
 </head>
 <body>
     @include('partials.header')
-    <main class="bg-dark">
+    <main>
         @yield('content')
     </main>
     @include('partials.footer')

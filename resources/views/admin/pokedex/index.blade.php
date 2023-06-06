@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <a class="btn btn-danger" href="#">Add new pokemon</a>
+        <a class="btn btn-danger" href="{{route('admin.pokedex.create')}}">Add new pokemon</a>
 
         <div class="table-responsive">
             <table class="table table-primary">
