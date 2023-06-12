@@ -15,7 +15,8 @@ class RegionController extends Controller
      */
     public function index()
     {
-        //
+        $regions = Region::all();
+        return view('admin.regions.index', compact('regions'));
     }
 
     /**
@@ -25,7 +26,8 @@ class RegionController extends Controller
      */
     public function create()
     {
-        //
+        $regions = Region::all();
+        return view('admin.regions.create', compact('regions'));
     }
 
     /**
@@ -36,7 +38,10 @@ class RegionController extends Controller
      */
     public function store(StoreRegionRequest $request)
     {
-        //
+        $val_data = $request->validated();
+
+        Region::create($val_data);
+        return to_route('admin.regions.index')->with('message', 'A new Region has been added successfully');
     }
 
     /**
@@ -47,7 +52,8 @@ class RegionController extends Controller
      */
     public function show(Region $region)
     {
-        //
+        $regions = Region::all();
+        return view('admin.regions.show', compact('regions'));
     }
 
     /**
@@ -58,7 +64,8 @@ class RegionController extends Controller
      */
     public function edit(Region $region)
     {
-        //
+        $regions = Region::all();
+        return view('admin.regions.edit', compact('regions'));
     }
 
     /**
@@ -70,7 +77,10 @@ class RegionController extends Controller
      */
     public function update(UpdateRegionRequest $request, Region $region)
     {
-        //
+        $val_data = $request->validated();
+
+        $region->update($val_data);
+        return to_route('admin.regions.index')->with('message', 'The Region has been edited successfully');
     }
 
     /**
@@ -81,6 +91,7 @@ class RegionController extends Controller
      */
     public function destroy(Region $region)
     {
-        //
+        $region->delete();
+        return to_route('admin.regions.index')->with('message', 'The Region has been deleted successfully');
     }
 }
