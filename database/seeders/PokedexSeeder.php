@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Pokemon;
+use App\Models\Pokedex;
 use App\Utilities\Helpers;
 use Illuminate\Database\Seeder;
 
@@ -18,7 +18,7 @@ class PokedexSeeder extends Seeder
         $pokemons = Helpers::getCsvData(__DIR__ . "/Pokemon-description-image.csv");
         foreach ($pokemons as $pokemon => $row) {
             if ($pokemon != 0) {
-                $pokemon = new Pokemon();
+                $pokemon = new Pokedex();
                 $pokemon->name = $row[1];
                 $pokemon->type_1 = $row[2];
                 $pokemon->type_2 = $row[3];

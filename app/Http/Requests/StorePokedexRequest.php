@@ -28,17 +28,18 @@ class StorePokedexRequest extends FormRequest
             'type_1' => 'required',
             'type_2' => 'nullable',
             'hp' => 'nullable',
-            'attack'=>'nullable',
-            'defense'=>'nullable',
-            'speed'=>'nullable',
-            'special'=>'nullable',
-            'gif'=> 'required|max:355',
-            'png' =>'nullable',
-            'description'=>'required|max:1500',
+            'attack' => 'nullable',
+            'defense' => 'nullable',
+            'speed' => 'nullable',
+            'special' => 'nullable',
+            'gif' => 'required|max:355',
+            'png' => 'nullable',
+            'description' => 'required|max:1500',
+            'region_id' => ['exists:regions,id'],
         ];
     }
 
-    public function messages() 
+    public function messages()
     {
         return [
             'name.required' => 'You must insert a name for this Pokemon!',
