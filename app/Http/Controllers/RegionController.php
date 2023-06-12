@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Region;
 use App\Http\Requests\StoreRegionRequest;
 use App\Http\Requests\UpdateRegionRequest;
+use App\Models\Region;
 
 class RegionController extends Controller
 {
@@ -52,8 +52,8 @@ class RegionController extends Controller
      */
     public function show(Region $region)
     {
-        $regions = Region::all();
-        return view('admin.regions.show', compact('regions'));
+        // $regions = Region::all();
+        return view('admin.regions.show', compact('region'));
     }
 
     /**
@@ -64,8 +64,8 @@ class RegionController extends Controller
      */
     public function edit(Region $region)
     {
-        $regions = Region::all();
-        return view('admin.regions.edit', compact('regions'));
+        //$regions = Region::all();
+        return view('admin.regions.edit', compact('region'));
     }
 
     /**

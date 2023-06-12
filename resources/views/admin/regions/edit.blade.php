@@ -1,7 +1,7 @@
-@extends('layouts.admin')
+@extends('layouts.app')
 
 @section('content')
-<div class="container">
+    <div class="container">
         <h1>Editer Region</h1>
         @include('partials.validation_errors')
         <form action="{{ route('admin.regions.update', $region->id) }}" method="post">
