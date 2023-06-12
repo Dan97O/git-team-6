@@ -1,9 +1,5 @@
-<footer>
-    <h4>Developed by</h4>
-    <ul>
-        <li>Luca Piacentini</li>
-        <li>Roberto Nesta</li>
-        <li>Nicola Faedo</li>
-        <li>Daniel Oddo</li>
-    </ul>
+<footer class="text-center">
+    <h6>
+        &copy; Team 6: Faedo Nicola, Nesta Roberto, Oddo Daniel, Piacentini Luca | 2023 Boolean
+    </h6>
 </footer>

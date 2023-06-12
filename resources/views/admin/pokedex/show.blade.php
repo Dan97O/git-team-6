@@ -6,7 +6,7 @@
             <div class="col-4 mx-auto py-5">
                 <div class="card">
                     <div class="card-header text-center text-uppercase bg-danger text-light">
-                        <h2 class="mb-0">{{ $pokedex->name }} #.{{ $pokedex->id }}</h2>
+                        <h2 class="mb-0">{{ $pokedex->name }} #{{ $pokedex->id }}</h2>
                     </div>
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
