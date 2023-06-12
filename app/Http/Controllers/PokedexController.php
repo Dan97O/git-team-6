@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StorePokedexRequest;
 use App\Http\Requests\UpdatePokedexRequest;
 use App\Models\Pokedex;
+use App\Models\Region;
 
 class PokedexController extends Controller
 {
@@ -29,7 +30,9 @@ class PokedexController extends Controller
     public function create()
     {
         $pokemons = Pokedex::all();
-        return view('admin.pokedex.create', compact('pokemons'));
+
+        $regions = Region::orderByDesc('id')->get();
+        return view('admin.pokedex.create', compact('pokemons', 'regions'));
     }
 
     /**
@@ -40,7 +43,7 @@ class PokedexController extends Controller
      */
     public function store(StorePokedexRequest $request)
     {
-        $val_data = $request ->validated();
+        $val_data = $request->validated();
 
         Pokedex::create($val_data);
         return to_route('admin.pokedex.index')->with('message', 'A new Pokemon has been added successfully');
@@ -53,7 +56,7 @@ class PokedexController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Pokedex $pokedex)
-    {   
+    {
         $pokemons = Pokedex::all();
         return view('admin.pokedex.show', compact('pokedex'));
     }
@@ -65,9 +68,10 @@ class PokedexController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Pokedex $pokedex)
-    {   
+    {
         $pokemons = Pokedex::all();
-        return view('admin.pokedex.edit', compact('pokedex'));
+        $regions = Region::orderByDesc('id')->get();
+        return view('admin.pokedex.edit', compact('pokedex', 'regions'));
     }
 
     /**
@@ -79,7 +83,7 @@ class PokedexController extends Controller
      */
     public function update(UpdatePokedexRequest $request, Pokedex $pokedex)
     {
-        $val_data = $request ->validated();
+        $val_data = $request->validated();
 
         $pokedex->update($val_data);
         return to_route('admin.pokedex.index')->with('message', 'The Pokemon has been edited successfully');

@@ -30,7 +30,7 @@ return new class extends Migration
         $table->timestamps();
         }); */
 
-        Schema::create('pokemon', function (Blueprint $table) {
+        Schema::create('pokemons', function (Blueprint $table) {
             $table->id();
             $table->string('name', 70);
             $table->string('type_1', 50);
@@ -54,6 +54,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pokemon');
+        Schema::dropIfExists('pokemons');
     }
 };
